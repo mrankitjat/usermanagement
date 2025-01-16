@@ -1,0 +1,5 @@
+spring.profiles.active=dev
+server.port=8081
+#actuater configuration
+management.endpoints.web.discovery.enabled=false
+management.endpoints.web.exposure.include=*

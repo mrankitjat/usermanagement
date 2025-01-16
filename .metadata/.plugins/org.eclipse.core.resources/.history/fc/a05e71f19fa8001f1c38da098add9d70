@@ -1,0 +1,17 @@
+package in.pickright.service;
+
+import in.pickright.dto.UserRequest;
+import in.pickright.dto.UserResponse;
+
+public interface UserService {
+
+	UserResponse registerUser(UserRequest request);
+	
+	UserResponse getUserById(String id);
+	
+	boolean deleteUserById(String id);
+	
+	boolean activeInactiveUserById(String id);
+	
+	UserResponse getUserByEmailOrMobileNoAndPassword(String emailOrMobileNo, String password);
+}

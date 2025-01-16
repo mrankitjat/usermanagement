@@ -1,0 +1,9 @@
+#eureka server configuration
+eureka.client.register-with-eureka=false
+
+#mongo db server configuration
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=users
+spring.data.mongodb.username=dev
+spring.data.mongodb.password=root

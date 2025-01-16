@@ -1,0 +1,30 @@
+package in.pickright.respository;
+
+import java.util.Optional;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import in.pickright.entity.User;
+
+@Repository
+public interface UserRepository extends MongoRepository<User, String> {
+	
+	Optional<User> findByIdAndIsDeletedFalseAndIsActiveTrue(String id);
+	
+	Optional<User> findByIdAndIsDeletedFalse(String id);
+	
+	boolean existsByEmailAndIsDeletedFalseAndIsActiveTrue(String email);
+	
+
+    @Query("{ $or: [ { 'email': { $regex: ?0, $options: 'i' } }, { 'mobileNo': { $regex: ?0, $options: 'i' } } ], 'isDeleted': false, 'isActive': true }")
+	boolean existsByEmailOrMobileNoAndIsDeletedFalseAndIsActiveTrue(String emailOrMobileNo);
+	
+	boolean existsByMobileNoAndIsDeletedFalseAndIsActiveTrue(String mobileNo);
+
+	@Query("SELECT u FROM User u WHERE "
+			+ "(u.email = :emailOrMobile OR u.mobileNo = :emailOrMobile) AND u.password = :password, AND u.isDeleted = false and u.isActive = true")
+	Optional<User> findByEmailOrMobileAndPasswordAndIsDeletedFalseAndIsActiveTrue(@Param("emailOrMobile") String emailOrMobile, @Param("password") String password);
+}

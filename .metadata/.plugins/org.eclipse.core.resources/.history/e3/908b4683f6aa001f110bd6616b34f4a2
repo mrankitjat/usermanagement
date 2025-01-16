@@ -1,0 +1,11 @@
+#mongo db configuration
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=users
+spring.data.mongodb.username=uat
+spring.data.mongodb.password=root
+
+#spring data jpa configuration
+spring.jpa.database-platform = org.hibernate.dialect.MySQLDialect
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto = update

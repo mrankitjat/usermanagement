@@ -1,0 +1,57 @@
+package in.pickright.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.pickright.constants.UserErrorMessages;
+import in.pickright.dto.UserRequest;
+import in.pickright.dto.UserResponse;
+import static in.pickright.helper.UserFieldValidation.validateFields;
+import in.pickright.respository.UserRepository;
+import in.pickright.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@Override
+	public UserResponse registerUser(UserRequest request) {
+		validateFields(request);
+		isAlreadyRegistered(request);
+		
+
+		return null;
+	}
+
+	private void isAlreadyRegistered(UserRequest request) {
+		if (Boolean.TRUE.equals(userRepository.existsByEmailAndIsDeletedFalseAndIsActiveTrue(request.getEmail()))) {
+			throw new RuntimeException("Email "+UserErrorMessages.ALREADY_REGISTERED);
+		}
+		
+		if (Boolean.TRUE.equals(userRepository.existsByMobileNoAndIsDeletedFalseAndIsActiveTrue(request.getMobileNo()))) {
+			throw new RuntimeException("Mobile number "+UserErrorMessages.ALREADY_REGISTERED);
+		}
+		
+	}
+
+	@Override
+	public boolean checkUserById(String id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean checkUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public UserResponse getUserByEmailOrMobileNoAndPassword(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

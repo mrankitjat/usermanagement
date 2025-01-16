@@ -1,0 +1,25 @@
+package in.pickright.helper;
+
+import in.pickright.constants.UserErrorMessages;
+import in.pickright.dto.UserRequest;
+
+public class FieldValidation {
+
+	public static boolean validate(UserRequest request) {
+		if (request.getFirstName()==null || request.getFirstName().isEmpty()) {
+			throw new RuntimeException(UserErrorMessages.FIRST_NAME_REQUIRED);
+		}
+		
+		if (request.getLastName()==null || request.getLastName().isEmpty()) {
+			throw new RuntimeException(UserErrorMessages.LAST_NAME_REQUIRED);
+		}
+		
+		if (request.getEmail()==null || request.getEmail().isEmpty()) {
+			throw new RuntimeException(UserErrorMessages.EMAIL_REQUIRED);
+		}
+		
+		if (request.getMobileNo()==null || request.getMobileNo().isEmpty()) {
+			throw new RuntimeException(UserErrorMessages.FIRST_NAME_REQUIRED);
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package in.pickright.helper;
+
+import org.bson.types.ObjectId;
+
+public class MongoIdConverter {
+	
+	public static ObjectId convertStringToObjectId(String id) {}
+
+}

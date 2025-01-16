@@ -1,0 +1,9 @@
+spring.profiles.active=dev
+server.port=8081
+spring.application.name=USER-SERVICE
+#actuater configuration
+management.endpoints.web.discovery.enabled=false
+management.endpoints.web.exposure.include=*
+#Swagger path for api gateway 
+springdoc.api-docs.path=/api/user-service/v3/api-docs
+springdoc.swagger-ui.path=/api/user-service/swagger-ui.html

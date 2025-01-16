@@ -1,0 +1,10 @@
+package in.pickright.constants;
+
+public class UserApiConstants {
+	public static final String USER_REQUEST_MAPPING ="/users";
+	
+	public static final String REGISTER_USER = "/register";
+	
+	public static final String INACTIVATE_USER = "/inactive";
+
+}

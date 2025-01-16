@@ -1,0 +1,6 @@
+package in.pickright.config;
+
+@Config
+public class MongoConfig {
+
+}

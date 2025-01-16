@@ -1,0 +1,10 @@
+#eureka server configuration
+eureka.instance.prefer-ip-address=true
+eureka.client.fetch-registry=true
+eureka.client.register-with-eureka=true
+eureka.client.service-url.defaultZone= http://live-ip-server:8761/eureka
+# Gateway routes
+spring.cloud.gateway.routes[0].id=user-service
+spring.cloud.gateway.routes[0].uri=http://live-server-ip:8081
+spring.cloud.gateway.routes[0].predicates[0]=Path=/user-service/**
+#spring.cloud.gateway.routes[0].filters[0]=RewritePath=/users/(?<segment>.*), /${segment}

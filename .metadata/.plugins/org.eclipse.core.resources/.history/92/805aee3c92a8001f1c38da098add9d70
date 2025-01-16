@@ -1,0 +1,12 @@
+package in.pickright.helper;
+
+import in.pickright.dto.UserRequest;
+
+public class FieldValidation {
+
+	public static boolean validate(UserRequest request) {
+		if (request.getFirstName()==null) {
+			throw new RuntimeException("First name required.");
+		}
+	}
+}

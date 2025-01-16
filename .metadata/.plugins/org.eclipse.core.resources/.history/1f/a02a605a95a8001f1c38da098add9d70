@@ -1,0 +1,15 @@
+package in.pickright.mapper;
+
+import in.pickright.dto.UserRequest;
+import in.pickright.entity.User;
+import in.pickright.utils.PasswordUtils;
+
+public class UserMapper {
+
+	public User convertUserReqToUser(UserRequest request) {
+
+		return User.builder().firstName(request.getFirstName()).lastName(request.getLastName())
+				.email(request.getEmail()).mobileNo(request.getMobileNo())
+				.password(PasswordUtils.encodePassword(request.getPassword())).build();
+	}
+}

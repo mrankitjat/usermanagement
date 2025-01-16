@@ -1,0 +1,5 @@
+package in.pickright.entity;
+
+public class User extends AbstractablePersistance {
+
+}

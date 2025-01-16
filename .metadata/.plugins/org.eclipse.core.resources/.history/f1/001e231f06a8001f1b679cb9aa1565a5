@@ -1,0 +1,9 @@
+package in.pickright.entity;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class AbstractablePersistance {
+
+	private String id;
+}

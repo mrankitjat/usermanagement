@@ -1,0 +1,19 @@
+package in.pickright.entity;
+
+import java.time.LocalDateTime;
+
+import org.springframework.data.mongodb.core.mapping.Field;
+
+public class AbstractablePersistance {
+
+	@Field("id")
+	private String id;
+	@Field("created_at")
+	private LocalDateTime createdAt;
+	@Field("updated_at")
+	private LocalDateTime updatedAt;
+	@Field("is_deleted")
+	private Boolean isDeleted;
+	@Field("is_active")
+	private Boolean isActive;
+}

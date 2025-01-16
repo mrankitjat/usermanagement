@@ -1,0 +1,10 @@
+#eureka server configuration
+eureka.instance.prefer-ip-address=true
+eureka.client.fetch-registry=true
+eureka.client.register-with-eureka=true
+eureka.client.service-url.defaultZone= http://localhost:8761/eureka
+
+#api gateway routes configuration
+spring.cloud.gateway.routes[0].id=USER-SERVICE
+spring.cloud.gateway.routes[0].uri=lb://USER-SERVICE
+spring.cloud.gateway.routes[0].predicates[0]=Path=/api/users/**

@@ -1,0 +1,10 @@
+package in.pickright.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import in.pickright.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+}

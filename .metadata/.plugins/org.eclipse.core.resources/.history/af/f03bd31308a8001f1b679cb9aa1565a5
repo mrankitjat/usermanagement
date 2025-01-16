@@ -1,0 +1,7 @@
+package in.pickright.service.impl;
+
+import in.pickright.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+}

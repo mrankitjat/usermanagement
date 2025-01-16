@@ -1,0 +1,9 @@
+package in.pickright.respository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import in.pickright.entity.User;
+
+public interface UserRepository extends MongoRepository<User, String>{
+
+}

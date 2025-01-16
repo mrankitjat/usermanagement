@@ -1,0 +1,3 @@
+spring.profiles.active=dev
+spring.application.name=pickright-service-discover
+server.port=8081

@@ -1,0 +1,5 @@
+package in.pickright.respository;
+
+public interface UserRepository {
+
+}

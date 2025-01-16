@@ -1,0 +1,13 @@
+package in.pickright;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PickrightUserServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PickrightUserServiceApplication.class, args);
+	}
+
+}
