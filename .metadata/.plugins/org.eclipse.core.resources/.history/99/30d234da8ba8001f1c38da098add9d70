@@ -1,8 +1,0 @@
-package in.pickright.service;
-
-import in.pickright.dto.UserRequest;
-
-public interface UserService {
-
-	String registerUser(UserRequest request);
-}

@@ -1,5 +1,0 @@
-package in.pickright.dto;
-
-public class UserResponse {
-
-}

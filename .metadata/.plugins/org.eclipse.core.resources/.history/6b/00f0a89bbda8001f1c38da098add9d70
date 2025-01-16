@@ -1,5 +1,0 @@
-package in.pickright.helper;
-
-public class MongoIdConverter {
-
-}

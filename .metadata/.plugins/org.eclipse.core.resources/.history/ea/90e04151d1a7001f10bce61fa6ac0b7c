@@ -1,7 +1,0 @@
-spring.profiles.active=dev
-spring.application.name=pickright-service-discover
-server.port = 8761
-
-#eureka server configuration
-eureka.client.register-with-eureka=false
-eureka.client.fetch-registry=false

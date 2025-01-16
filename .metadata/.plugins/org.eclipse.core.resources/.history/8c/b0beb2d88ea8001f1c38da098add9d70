@@ -1,6 +1,0 @@
-package in.pickright.constants;
-
-public class UserApiConstants {
-	public static final String USER_REQUEST_MAPPING ="/users";
-
-}
